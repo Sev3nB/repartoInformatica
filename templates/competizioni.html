@@ -6,16 +6,65 @@
 <main class="container">
     <section class="hero-section">
         <h1>Reparto Informatica - Competizioni</h1>
+        <p>Scopri i contest, gli hackathon e le gare nazionali che vedono protagonisti i nostri studenti.</p>
     </section>
 
-    <section class="cont">
+    <section class="competizioni-grid">
         {% for gara in competizioni %}
-        <article class="comp_card">
-            <h2>{{ gara.titolo }}</h2>
-            <p><strong>Data:</strong> <time datetime="{{ gara.data }}">{{ gara.data }}</time></p>
-            <a href="{{ url_for('dettaglio', comp_id=gara.id) }}">Scopri di più</a>
+        <article class="comp_card_modern">
+            <div class="comp_card_header">
+                <span class="comp_badge">Gara d'Istituto</span>
+            </div>
+
+            <div class="comp_card_body">
+                <h2>{{ gara.titolo }}</h2>
+                <div class="comp_date">
+                    <span class="calendar-icon">📅</span>
+                    <time datetime="{{ gara.data }}">{{ gara.data }}</time>
+                </div>
+            </div>
+
+            <div class="comp_card_footer">
+                <button class="btn-scopri" onclick="openModal('modal-{{ gara.id }}')">
+                    Scopri di più <span class="freccia">&rarr;</span>
+                </button>
+            </div>
         </article>
+
+        <div id="modal-{{ gara.id }}" class="modal-overlay" onclick="closeModal('modal-{{ gara.id }}')">
+            <div class="modal-card" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal('modal-{{ gara.id }}')">&times;</button>
+
+                <span class="badge">Competizione</span>
+                <h1>{{ gara.titolo }}</h1>
+
+                <div class="info-meta">
+                    <p><strong>📅 Data:</strong> {{ gara.data }}</p>
+                </div>
+
+                <div class="descrizione">
+                    <h3>Descrizione</h3>
+                    <p>{{ gara.descrizione }}</p>
+                </div>
+
+                <div class="azioni">
+                    <a href="{{ gara.link }}" target="_blank" class="btn-progetto">Sito Ufficiale</a>
+                </div>
+            </div>
+        </div>
         {% endfor %}
     </section>
 </main>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+</script>
 {% endblock content %}
