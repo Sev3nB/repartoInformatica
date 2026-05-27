@@ -1,0 +1,58 @@
+[
+    {
+        "id": "contest",
+        "titolo": "Contest “Informatica × Gioco = Fantasia + Regole”",
+        "descrizione": "In collaborazione con l’Università di Camerino e IVIPRO, gli studenti hanno sviluppato videogiochi professionali in Unity, curando ogni aspetto dal Game Design Document (GDD) alla programmazione delle meccaniche.",
+        "layout": "grid",
+        "elementi": [
+            {
+                "titolo": "The Mortal Eclipse: The Last Hope",
+                "descrizione": "In un futuro post-apocalittico, la terra è stata devastata da una malattia sconosciuta. Astra affronta i pericoli nella speranza di trovare la cura.",
+                "immagine": "mortalEclipse.png",
+                "crediti": "Matthias Livera, Luigi Sgura, Simone Giove, Brian Romano (3^DI A.S 23/24)",
+                "link": "https://octofl.itch.io/the-mortal-eclipse-the-last-hope",
+                "testo_bottone": "Download Gioco"
+            },
+            {
+                "titolo": "AI Redemption",
+                "descrizione": "Un avvincente gioco di avventura e logica incentrato sul riscatto di un'intelligenza artificiale all'interno di un sistema cibernetico.",
+                "immagine": "aiRedemption.png",
+                "crediti": "Francesco Ciccarese, Lorenzo Lega, Lorenzo Mangia, Marco Marasco (3^DI A.S 23/24)",
+                "link": "https://lxr3nz07.itch.io/ai-redemption",
+                "testo_bottone": "Download Gioco"
+            }
+        ]
+    },
+    {
+        "id": "civica",
+        "titolo": "Giochi di Educazione Civica",
+        "descrizione": "Progetti interattivi ideati per sensibilizzare sui rischi della guida in stato di alterazione e promuovere comportamenti responsabili sulla strada.",
+        "layout": "grid",
+        "elementi": [
+            {
+                "titolo": "Download Gioco 1 (Clear Vision)",
+                "link": "https://octofl.itch.io/clear-vision-clear-roads"
+            },
+            {
+                "titolo": "Visualizzazione Gioco 2 (Contro il vizio)",
+                "link": "https://sam782.itch.io/unviaggiocontroilvizio"
+            }
+        ]
+    },
+    {
+        "id": "ctf",
+        "titolo": "Cybersecurity & Capture The Flag",
+        "descrizione": "Il reparto affronta sfide di sicurezza informatica. Gli utenti possono affrontare problemi di crittografia, analisi del codice, sicurezza web e reverse engineering.",
+        "layout": "list",
+        "elementi": [
+            {
+                "titolo": "GiorgiCTF",
+                "descrizione": "Il sito è stato interamente progettato dagli studenti della classe 5DI sotto la guida del Prof. Colazzo. Utilizzato durante i laboratori aperti e gli Open Day della scuola.",
+                "immagine": "giorgiCTF.png",
+                "crediti": "Samuel Luggeri, Simone Giove, Lorenzo Lega, Lorenzo Mangia, Marco Marasco (5^DI A.S 25/26)",
+                "link": "https://giorgictf.it",
+                "testo_bottone": "Clicca qui per visualizzare il sito!"
+            }
+        ]
+    }
+]

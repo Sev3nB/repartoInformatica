@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "titolo": "Olimpiadi di Informatica (OII)",
+        "descrizione": "Le Olimpiadi Italiane di Informatica (OII) sono rivolte agli studenti delle scuole superiori con l'obiettivo di diffondere l'apprendimento della programmazione per la risoluzione di problemi computazionali di crescente complessità.",
+        "data": "Dicembre 2025",
+        "link": "https://www.olimpiadi-informatica.it/"
+    },
+    {
+        "id": 2,
+        "titolo": "Olimpiadi di Informatica (OIS)",
+        "descrizione": "Le Olimpiadi di Informatica a Squadre sono una competizione rivolta agli studenti degli Istituti Secondari di Secondo Grado, che gareggiano in squadre di non più di 4 studenti (e con un massimo di 2 riserve) sfidandosi nel risolvere problemi informatici in Pascal, Python, Java (senza template), C, o C++.",
+        "data": "Dicembre 2025",
+        "link": "https://sites.google.com/aldini.istruzioneer.it/olimpiadi-informatica-squadre/homepage"
+    },
+    {
+        "id": 3,
+        "titolo": "OliCyber.it",
+        "descrizione": "Programma di competizioni mirato a favorire e incentivare l'avvicinamento degli studenti alle problematiche della cybersicurezza.",
+        "data": "Da Dicembre 2025 a Maggio 2026",
+        "link": "https://olicyber.it/"
+    },
+    {
+        "id": 4,
+        "titolo": "Hack the Code Challenge Teen",
+        "descrizione": "La Reply Hack the Code Challenge Teen Edition è una competizione online gratuita organizzata da Reply, rivolta specificamente a studenti delle scuole superiori di età compresa tra i 14 e i 19 anni.",
+        "data": "12 Marzo 2025",
+        "link": "https://challenges.reply.com/challenges/hack-the-code-teen/learn-train"
+    }
+]

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %} Progetti - Reparto Informatica {% endblock title%}
+
+{% block content %}
+<main class="container">
+
+    <div class="hero-section">
+        <h1>Progetti degli studenti</h1>
+        <p>In questa sezione sono raccolti i lavori realizzati dagli studenti del nostro istituto. Spaziando dalla
+            programmazione di applicazioni alla cybersecurity e al game design, questi progetti mostrano creatività e
+            competenze tecniche.</p>
+    </div>
+
+    {% for sezione in sezioni %}
+    <section class="sezione-dinamica {{ sezione.layout }}-layout" id="{{ sezione.id }}">
+        <h2>{{ sezione.titolo }}</h2>
+        <p class="sezione-desc">{{ sezione.descrizione }}</p>
+
+        <div class="contenitore-elementi">
+            {% for item in sezione.elementi %}
+            <article class="progetto-item">
+                {% if item.immagine %}
+                <div class="item-media">
+                    <img src="{{ url_for('static', filename='images/' ~ item.immagine) }}" alt="{{ item.titolo }}">
+                </div>
+                {% endif %}
+                <div class="item-body">
+                    <h3>{{ item.titolo }}</h3>
+                    <p class="item-desc">{{ item.descrizione }}</p>
+                    {% if item.crediti %}
+                    <p class="item-credits"><strong>Creato da:</strong> {{ item.crediti | safe }}</p>
+                    {% endif %}
+                    <a href="{{ item.link }}" target="_blank" class="btn-progetto">{{ item.testo_bottone | default('Apri
+                        Progetto') }}</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    {% if not loop.last %}
+    <hr class="sezione-divider">{% endif %}
+    {% endfor %}
+</main>
+{% endblock content %}

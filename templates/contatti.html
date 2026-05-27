@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} Contatti - Reparto Informatica {% endblock title%}
+
+{% block content %}
+<main class="container">
+    <section class="hero-section">
+        <h1>Contatti</h1>
+    </section>
+
+    <section class="contatti-sezione">
+        <div class="contatti-grid">
+            <article class="contatto-card">
+                <h3>Email</h3>
+                <p><a href="mailto:brtf010004@istruzione.it">brtf010004@istruzione.it</a></p>
+            </article>
+
+            <article class="contatto-card">
+                <h3>Telefono</h3>
+                <p><a href="tel:+390831418894">0831 41 88 94</a></p>
+            </article>
+
+            <article class="contatto-card">
+                <h3>Indirizzo</h3>
+                <p>Via Amalfi, 6<br>
+                    72100 Brindisi<br>
+                    Italia</p>
+            </article>
+        </div>
+
+        <div class="mappa-container">
+            <h2>Dove Trovarci</h2>
+            <div class="mappa-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.313793935791!2d17.935881100000003!3d40.6450128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13467a16874f3d3b%3A0xa1599b90d596f97!2sIstituto%20Tecnico%20Tecnologico%20%22G.%20Giorgi%22!5e0!3m2!1sit!2sit!4v1770323944341!5m2!1sit!2sit"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock content %}

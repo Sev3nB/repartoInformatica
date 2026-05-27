@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %} Home - Reparto Informatica {% endblock title%}
+
+{% block content %}
+<main class="container">
+    <section class="hero-section">
+        <h1>Benvenuti nel cuore tecnologico dell'istituto</h1>
+        <p>Il Dipartimento di Informatica coordina le attività didattiche, i laboratori e l'innovazione digitale della
+            scuola, preparando gli studenti alle sfide del futuro tecnologico.</p>
+    </section>
+
+    <article class="card">
+        <div class="image">
+            <div class="photo">LAB 01</div>
+            <div class="credits">Coding & Sviluppo Software</div>
+        </div>
+        <div class="content">
+            <h2>I Nostri Laboratori</h2>
+            <p>Disponiamo di postazioni all'avanguardia dotate di ambienti di sviluppo moderni. Dalla programmazione in
+                Python e Java al Web Design, i nostri spazi sono progettati per l'apprendimento pratico.</p>
+            <p>Ogni postazione è configurata con sistemi Windows per offrire una visione completa degli ecosistemi
+                software.</p>
+        </div>
+    </article>
+
+    <article class="card">
+        <div class="content">
+            <h2>Innovazione e Progetti</h2>
+            <p>Partecipiamo attivamente a competizioni nazionali come le Olimpiadi di Informatica e sviluppiamo progetti
+                interni di IoT, Robotica educativa e Cybersecurity.</p>
+            <p>La nostra missione è trasformare la teoria in codice funzionante e soluzioni reali.</p>
+        </div>
+        <div class="image">
+            <div class="photo">IOT</div>
+            <div class="credits">Progetti di Robotica 2024</div>
+        </div>
+    </article>
+
+    <article class="card">
+        <div class="image">
+            <div class="photo">
+                <img src="{{ url_for('static', filename='images/Cisco-Certified-Network-Associate.png') }}"
+                    alt="Cisco Certification">
+            </div>
+            <div class="credits">Test Center Autorizzato</div>
+        </div>
+        <div class="content">
+            <h2>Certificazioni Internazionali</h2>
+            <p>Il dipartimento supporta gli studenti nel conseguimento di certificazioni riconosciute a livello globale,
+                fondamentali per il curriculum professionale e universitario. <br>Come quella di <strong>Cisco
+                    Networking Academy</strong></p>
+        </div>
+    </article>
+</main>
+{% endblock content %}

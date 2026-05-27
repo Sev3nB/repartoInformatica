@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Competizioni - Reparto Informatica {% endblock title%}
+
+{% block content %}
+<main class="container">
+    <section class="hero-section">
+        <h1>Reparto Informatica - Competizioni</h1>
+    </section>
+
+    <section class="cont">
+        {% for gara in competizioni %}
+        <article class="comp_card">
+            <h2>{{ gara.titolo }}</h2>
+            <p><strong>Data:</strong> <time datetime="{{ gara.data }}">{{ gara.data }}</time></p>
+            <a href="{{ url_for('dettaglio', comp_id=gara.id) }}">Scopri di più</a>
+        </article>
+        {% endfor %}
+    </section>
+</main>
+{% endblock content %}

@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap');
+
+/* --- Variabili Globali --- */
+:root {
+    --primary-color: #1f7db7;
+    --primary-hover: #155a8a;
+    --bg-main: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-dark: #2c3e50;
+    --text-muted: #5a6c7d;
+    --text-light: #95a5a6;
+    --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 40px rgba(31, 125, 183, 0.15);
+    --border-radius: 16px;
+}
+
+/* --- Reset e Base --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Titillium Web", sans-serif;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Tipografia --- */
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* --- Layout Generale (Accorpato) --- */
+.container, .cont, .cont-dettaglio {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cont, .cont-dettaglio {
+    max-width: 800px;
+}
+
+/* --- Nuova Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), #039be5);
+    color: white;
+    padding: 60px 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* --- Header / Topbar --- */
+.topbar {
+    height: 90px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 900;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-circle img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+nav ul { list-style: none; display: flex; }
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary-color);
+}
+
+nav a.active {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+/* --- Componenti: Cards --- */
+.card, .comp_card, .card-dettaglio {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.card:hover, .comp_card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.comp_card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* --- Immagini nelle Card --- */
+.image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content, .text {
+    flex: 2;
+}
+
+.photo {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 4/3;
+    background: #eef2f5;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.credits {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* --- Griglia Contatti --- */
+.contatti-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.contatto-card {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.contatto-card h3 { margin-bottom: 15px; }
+.contatto-card a { color: var(--text-muted); text-decoration: none; font-weight: 600; }
+.contatto-card a:hover { color: var(--primary-color); }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    color: var(--text-light);
+    margin-top: 40px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .topbar {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    nav a { margin: 0 10px; }
+    .card { flex-direction: column; text-align: center; }
+    .hero-section h1 { font-size: 2rem; }
+}
+
+
+/* --- Aggiornamento Navigazione (per liste semantiche) --- */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu a.active {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+/* --- FIX CENTRAGGIO MAPPA E STRUTTURA CONTATTI --- */
+.contatti-sezione {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+.mappa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra il titolo h2 e il wrapper della mappa */
+    text-align: center;
+    width: 100%;
+}
+
+.mappa-container h2 {
+    margin-bottom: 20px;
+}
+
+.mappa-wrapper {
+    width: 100%;
+    max-width: 800px; /* Imposta una larghezza massima ottimale per la mappa */
+    height: 450px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.mappa-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+/* --- STRUTTURA DELLE SEZIONI DINAMICHE --- */
+.sezione-dinamica {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sezione-desc {
+    max-width: 800px;
+    color: var(--text-muted);
+}
+
+.sezione-divider {
+    margin-top: 40px;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* --- LOGICA DEI COMPORTAMENTI DEI LAYOUT --- */
+
+/* 1. Layout a Griglia (Contest Unity) */
+.grid-layout .contenitore-elementi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+.grid-layout .progetto-item {
+    flex-direction: column; /* Immagine sopra, testo sotto */
+}
+.grid-layout .item-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 2. Layout a Lista Orizzontale (Cybersecurity/CTF) */
+.list-layout .contenitore-elementi {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.list-layout .progetto-item {
+    flex-direction: row; /* Immagine a sinistra, testo a destra */
+    align-items: stretch;
+}
+.list-layout .item-media {
+    flex: 0.8;
+    aspect-ratio: 16/10;
+}
+.list-layout .item-body {
+    flex: 1.2;
+}
+
+/* 3. Layout a Bottoni/Infolinks (Educazione Civica) */
+.links-layout {
+    background: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+}
+.links-layout .contenitore-elementi {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* --- ELEMENTO SCHEDA UNIFICATO (.progetto-item) --- */
+.progetto-item {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.progetto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.item-media {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #eef2f5;
+}
+
+.item-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.item-body h3 {
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+.item-desc {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.item-credits {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: auto; /* Spinge i crediti in basso */
+}
+
+/* --- ELEMENTI INTERATTIVI UNIFICATI (BOTTONI) --- */
+.btn-progetto {
+    display: block;
+    text-align: center;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.btn-progetto:hover {
+    background: var(--primary-hover);
+}
+
+.btn-outline {
+    padding: 12px 25px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .list-layout .progetto-item {
+        flex-direction: column-reverse; /* Su mobile la lista orizzontale si impila */
+    }
+}
