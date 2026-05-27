@@ -1,7 +1,9 @@
 import json
-from flask import Flask,render_template, abort
+import os
+from flask import Flask, render_template, abort
 
 app = Flask(__name__)
+
 def carica_dati(jsonFile):
     try:
         with open(jsonFile, 'r', encoding='utf-8') as f:
@@ -25,17 +27,19 @@ def competizioni():
 
 @app.route('/competizione/<int:comp_id>')
 def dettaglio(comp_id):
-    competizioni = carica_dati()
+    competizioni = carica_dati("competizioni.json")
+
     gara = next((item for item in competizioni if item["id"] == comp_id), None)
-    
+
     if gara is None:
         abort(404)
-        
+
     return render_template('dettaglio_comp.html', gara=gara)
 
 @app.route("/contatti")
 def contatti():
     return render_template("contatti.html")
 
-if (__name__ == "__main__"):
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
