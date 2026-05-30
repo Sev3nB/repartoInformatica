@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %} Home - Reparto Informatica {% endblock title%}
+{% block title %} Home - Dipartimento di Informatica {% endblock title%}
 
 {% block content %}
 <main class="container">
@@ -12,7 +12,9 @@
 
     <article class="card">
         <div class="image">
-            <div class="photo">LAB 01</div>
+            <div class="photo">
+                <img src="{{url_for('static', filename='images/giorgiLab.jpg')}}">
+            </div>
             <div class="credits">Coding & Sviluppo Software</div>
         </div>
         <div class="content">
@@ -32,16 +34,17 @@
             <p>La nostra missione è trasformare la teoria in codice funzionante e soluzioni reali.</p>
         </div>
         <div class="image">
-            <div class="photo">IOT</div>
-            <div class="credits">Progetti di Robotica 2024</div>
+            <div class="photo">
+                <img src="{{url_for('static', filename='images/giorgiCyber.jpg')}}">
+            </div>
+            <div class="credits">Cybergiorgi</div>
         </div>
     </article>
 
     <article class="card">
         <div class="image">
             <div class="photo">
-                <img src="{{ url_for('static', filename='images/Cisco-Certified-Network-Associate.png') }}"
-                    alt="Cisco Certification">
+                <img src="{{ url_for('static', filename='images/cisco.png') }}" alt="Cisco Certification">
             </div>
             <div class="credits">Test Center Autorizzato</div>
         </div>
